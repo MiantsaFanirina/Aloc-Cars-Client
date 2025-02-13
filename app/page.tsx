@@ -1,101 +1,327 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      return (
+          <div className={'w-full px-[72px] xl:px-[216px] pt-[36px] flex flex-col gap-[144px] mb-[144px]'}>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+              {/* HERO SECTION */}
+
+              <div className={'w-full flex'}>
+                  <div className={'w-1/2 flex items-center pr-[72px]'}>
+                      <div className={'flex flex-col gap-[20px]'}>
+                          <h1 className={'font-semibold text-[52px]'}>
+                              Experience Luxury on Wheels in Switzerland
+                          </h1>
+                          <p className={'font-regular'}>
+                              Indulge in our exclusive fleet of high-end sports and prestige cars. Whether for a special
+                              occasion or a stylish getaway, we ensure an unforgettable driving experience.
+                          </p>
+                          <div className={'flex gap-2'}>
+                              <Link href={'/download'}
+                                    className={'font-bold bg-black text-white px-4 py-2'}>
+                                  Download our APP now
+                              </Link>
+                          </div>
+                      </div>
+                  </div>
+                  <div className={'w-1/2 aspect-square bg-[#D9D9D9]'}></div>
+              </div>
+
+              {/*  HOW IT WORKS?  */}
+              <div className={'w-full flex flex-col gap-[72px]'}>
+
+                  {/* TOP TEXT */}
+                  <div className={'w-full flex'}>
+                      <div className={'w-1/2 pr-[72px]'}>
+                          <h2 className={'font-semibold text-[30px]'}>
+                              Effortless Luxury: Your Guide to Renting Cars and Limousines in Switzerland
+                          </h2>
+                      </div>
+
+                      <div className={'w-1/2'}>
+                          <p>
+                              Experience the ultimate convenience with our seamless rental process. Whether you need a
+                              high-performance sports car or a luxurious limousine, we have you covered.
+                              Enjoy a stress-free journey from the moment you book to the moment you drive away.
+                          </p>
+                      </div>
+
+                  </div>
+
+                  {/*  STEPS  */}
+                  <div className={'w-full flex justify-between gap-[72px]'}>
+
+                      {/* STEP */}
+                      <div className={'flex flex-col min-w-[384px] gap-4 text-center'}>
+                          <Image
+                              src={'/home/choose.svg'}
+                              alt={'choose illustration'}
+                              width={100}
+                              height={100}
+                              className={'w-full h-[216px] object-center object-contain'}
+                          />
+                          <div className={'flex flex-col gap-2 pt-[5px]'}>
+                              <h3 className={'font-bold'}>
+                                  Choose Your Dream Car or Limousine for Your Journey
+                              </h3>
+                              <p>
+                                  Select from our exclusive fleet of luxury vehicles.
+                              </p>
+                          </div>
+                      </div>
+
+                      {/* STEP */}
+                      <div className={'flex flex-col min-w-[384px] gap-4 text-center'}>
+                          <Image
+                              src={'/home/custom.svg'}
+                              alt={'customization illustration'}
+                              width={100}
+                              height={100}
+                              className={'w-full h-[216px] object-center object-contain'}
+                          />
+                          <div className={'flex flex-col gap-2 pt-[5px]'}>
+                              <h3 className={'font-bold'}>
+                                  Customize Your Rental Experience with Our Premium Services
+                              </h3>
+                              <p>
+                                  Add options like a personal driver or VIP concierge services.
+                              </p>
+                          </div>
+                      </div>
+
+                      {/* STEP */}
+                      <div className={'flex flex-col min-w-[384px] gap-4 text-center'}>
+                          <Image
+                              src={'/home/drive.svg'}
+                              alt={'drive illustration'}
+                              width={100}
+                              height={100}
+                              className={'w-full h-[216px] object-center object-contain'}
+                          />
+                          <div className={'flex flex-col gap-2 pt-[5px]'}>
+                              <h3 className={'font-bold'}>
+                                  Enjoy a Luxurious Ride Tailored to Your Needs
+                              </h3>
+                              <p>
+                                  Select from our exclusive fleet of luxury vehicles.
+                              </p>
+                          </div>
+                      </div>
+
+                  </div>
+
+              </div>
+
+              {/*  DISCOVER  */}
+              <div className={'w-full flex flex-col gap-[72px]'}>
+                  <h2 className={'font-semibold text-[30px]'}>
+                      Discover our hire vehicles
+                  </h2>
+
+
+                  {/* LINKS */}
+                  <div className={'w-full flex gap-y-[72px] justify-between flex-wrap'}>
+
+                      {/* LINK */}
+                      <div className={'w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
+                          <Image
+                              src={'/home/aloc-cars-location-budget.jpg'}
+                              width={1000}
+                              height={1000}
+                              alt={'budget cars'}
+                              className={'w-full h-full absolute top-0 left-0 object-center object-cover group-hover:scale-110 transition-all'}
+
+                          />
+                          <div
+                              className={`
+                                w-full h-full absolute top-0 left-0 bg-black/25 backdrop-blur-sm
+                                opacity-0 group-hover:opacity-100 transition-all
+                                flex
+                                justify-center
+                                items-center
+                              `}
+                          >
+                              <h1 className={`
+                                text-white font-bold uppercase text-[20px]
+                                opacity-0
+                                translate-y-[72px]
+                                group-hover:-translate-y-[0]
+                                group-hover:opacity-100
+                                transition-all
+                                delay-150
+                              `}>
+                                  BUDGET / LOW-COST HIRE
+                              </h1>
+                          </div>
+                      </div>
+                      {/* LINK */}
+                      <div className={'w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
+                          <Image
+                              src={'/home/aloc-cars-location-tourisme.jpg'}
+                              width={1000}
+                              height={1000}
+                              alt={'budget cars'}
+                              className={'w-full h-full absolute top-0 left-0 object-center object-cover group-hover:scale-110 transition-all'}
+
+                          />
+                          <div
+                              className={`
+                                w-full h-full absolute top-0 left-0 bg-black/25 backdrop-blur-sm
+                                opacity-0 group-hover:opacity-100 transition-all
+                                flex
+                                justify-center
+                                items-center
+                              `}
+                          >
+                              <h1 className={`
+                                text-white font-bold uppercase text-[20px]
+                                opacity-0
+                                translate-y-[72px]
+                                group-hover:-translate-y-[0]
+                                group-hover:opacity-100
+                                transition-all
+                                delay-150
+                              `}>
+
+
+                                  STANDARD / COMPACT HIRE
+
+                              </h1>
+                          </div>
+                      </div>
+                      {/* LINK */}
+                      <div className={'w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
+                          <Image
+                              src={'/home/aloc-cars-location-utilitaires.jpg'}
+                              width={1000}
+                              height={1000}
+                              alt={'budget cars'}
+                              className={'w-full h-full absolute top-0 left-0 object-center object-cover group-hover:scale-110 transition-all'}
+
+                          />
+                          <div
+                              className={`
+                                w-full h-full absolute top-0 left-0 bg-black/25 backdrop-blur-sm
+                                opacity-0 group-hover:opacity-100 transition-all
+                                flex
+                                justify-center
+                                items-center
+                              `}
+                          >
+                              <h1 className={`
+                                text-white font-bold uppercase text-[20px]
+                                opacity-0
+                                translate-y-[72px]
+                                group-hover:-translate-y-[0]
+                                group-hover:opacity-100
+                                transition-all
+                                delay-150
+                              `}>
+                                  UTILITIES HIRE (2.5 – 20 m3)
+                              </h1>
+                          </div>
+                      </div>
+                      {/* LINK */}
+                      <div className={'w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
+                          <Image
+                              src={'/home/aloc-cars-location-prestige.jpg'}
+                              width={1000}
+                              height={1000}
+                              alt={'budget cars'}
+                              className={'w-full h-full absolute top-0 left-0 object-center object-cover group-hover:scale-110 transition-all'}
+
+                          />
+                          <div
+                              className={`
+                                w-full h-full absolute top-0 left-0 bg-black/25 backdrop-blur-sm
+                                opacity-0 group-hover:opacity-100 transition-all
+                                flex
+                                justify-center
+                                items-center
+                              `}
+                          >
+                              <h1 className={`
+                                text-white font-bold uppercase text-[20px]
+                                opacity-0
+                                translate-y-[72px]
+                                group-hover:-translate-y-[0]
+                                group-hover:opacity-100
+                                transition-all
+                                delay-150
+                              `}>
+                                  PRESTIGE / GT SPORT HIRE
+                              </h1>
+                          </div>
+                      </div>
+                      {/* LINK */}
+                      <div className={'w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
+                          <Image
+                              src={'/home/aloc-cars-location-4x4.jpg'}
+                              width={1000}
+                              height={1000}
+                              alt={'budget cars'}
+                              className={'w-full h-full absolute top-0 left-0 object-center object-cover group-hover:scale-110 transition-all'}
+
+                          />
+                          <div
+                              className={`
+                                w-full h-full absolute top-0 left-0 bg-black/25 backdrop-blur-sm
+                                opacity-0 group-hover:opacity-100 transition-all
+                                flex
+                                justify-center
+                                items-center
+                              `}
+                          >
+                              <h1 className={`
+                                text-white font-bold uppercase text-[20px]
+                                opacity-0
+                                translate-y-[72px]
+                                group-hover:-translate-y-[0]
+                                group-hover:opacity-100
+                                transition-all
+                                delay-150
+                              `}>
+                                  4X4 / SUV HIRE
+                              </h1>
+                          </div>
+                      </div>
+                      {/* LINK */}
+                      <div className={'w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
+                          <Image
+                              src={'/home/aloc-cars-location-minibus.jpg'}
+                              width={1000}
+                              height={1000}
+                              alt={'budget cars'}
+                              className={'w-full h-full absolute top-0 left-0 object-center object-cover group-hover:scale-110 transition-all'}
+
+                          />
+                          <div
+                              className={`
+                                w-full h-full absolute top-0 left-0 bg-black/25 backdrop-blur-sm
+                                opacity-0 group-hover:opacity-100 transition-all
+                                flex
+                                justify-center
+                                items-center
+                              `}
+                          >
+                              <h1 className={`
+                                text-white font-bold uppercase text-[20px]
+                                opacity-0
+                                translate-y-[72px]
+                                group-hover:-translate-y-[0]
+                                group-hover:opacity-100
+                                transition-all
+                                delay-150
+                              `}>
+                                  MINIBUS HIRE (7 – 14 SEATED)
+                              </h1>
+                          </div>
+                      </div>
+
+                  </div>
+
+              </div>
+          </div>
+      );
 }
