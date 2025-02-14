@@ -7,9 +7,9 @@ export default function Home() {
 
               {/* HERO SECTION */}
 
-              <div className={'w-full flex'}>
-                  <div className={'w-1/2 flex items-center pr-[72px]'}>
-                      <div className={'flex flex-col gap-[20px]'}>
+              <div className={'w-full flex flex-col gap-6 md:gap-0 md:flex-row'}>
+                  <div className={'w-full md:w-1/2 flex items-center md:pr-[72px]'}>
+                      <div className={'flex flex-col items-center text-center md:text-start md:items-start gap-[20px]'}>
                           <h1 className={'font-semibold text-[52px]'}>
                               Experience Luxury on Wheels in Switzerland
                           </h1>
@@ -25,21 +25,21 @@ export default function Home() {
                           </div>
                       </div>
                   </div>
-                  <div className={'w-1/2 aspect-square bg-[#D9D9D9]'}></div>
+                  <div className={'w-full md:w-1/2 aspect-square bg-[#D9D9D9]'}></div>
               </div>
 
               {/*  HOW IT WORKS?  */}
               <div className={'w-full flex flex-col gap-[72px]'}>
 
                   {/* TOP TEXT */}
-                  <div className={'w-full flex'}>
-                      <div className={'w-1/2 pr-[72px]'}>
+                  <div className={'w-full flex flex-col text-center md:text-start gap-4 md:gap-0 md:flex-row'}>
+                      <div className={'w-full md:w-1/2 md:pr-[72px]'}>
                           <h2 className={'font-semibold text-[30px]'}>
                               Effortless Luxury: Your Guide to Renting Cars and Limousines in Switzerland
                           </h2>
                       </div>
 
-                      <div className={'w-1/2'}>
+                      <div className={'w-full md:w-1/2'}>
                           <p>
                               Experience the ultimate convenience with our seamless rental process. Whether you need a
                               high-performance sports car or a luxurious limousine, we have you covered.
@@ -50,10 +50,10 @@ export default function Home() {
                   </div>
 
                   {/*  STEPS  */}
-                  <div className={'w-full flex justify-between gap-[72px]'}>
+                  <div className={'w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-[72px]'}>
 
                       {/* STEP */}
-                      <div className={'flex flex-col min-w-[384px] gap-4 text-center'}>
+                      <div className={'flex flex-col min-w-[384px] max-w-[384px] gap-4 text-center'}>
                           <Image
                               src={'/home/choose.svg'}
                               alt={'choose illustration'}
@@ -72,7 +72,7 @@ export default function Home() {
                       </div>
 
                       {/* STEP */}
-                      <div className={'flex flex-col min-w-[384px] gap-4 text-center'}>
+                      <div className={'flex flex-col min-w-[384px] max-w-[384px] gap-4 text-center'}>
                           <Image
                               src={'/home/custom.svg'}
                               alt={'customization illustration'}
@@ -91,7 +91,7 @@ export default function Home() {
                       </div>
 
                       {/* STEP */}
-                      <div className={'flex flex-col min-w-[384px] gap-4 text-center'}>
+                      <div className={'flex flex-col min-w-[384px] max-w-[384px] gap-4 text-center'}>
                           <Image
                               src={'/home/drive.svg'}
                               alt={'drive illustration'}
@@ -115,13 +115,13 @@ export default function Home() {
 
               {/*  DISCOVER  */}
               <div className={'w-full flex flex-col gap-[72px]'}>
-                  <h2 className={'font-semibold text-[30px]'}>
+                  <h2 className={'font-semibold text-center md:text-start text-[30px]'}>
                       Discover our hire vehicles
                   </h2>
 
 
                   {/* LINKS */}
-                  <div className={'w-full flex gap-y-[72px] justify-between flex-wrap'}>
+                  <div className={'w-full flex flex-col md:flex-row gap-y-[72px] items-center justify-between flex-wrap'}>
 
                       {/* LINK */}
                       <div className={'w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>

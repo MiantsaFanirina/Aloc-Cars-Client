@@ -4,20 +4,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {NavLinksData} from "@/features/data/navlinksData";
+import {useState} from "react";
 
 
 const Navbar = () => {
     const pathname = usePathname();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="w-full px-[72px] xl:px-[216px] py-[18px] z-50 flex items-center justify-between fixed top-0 left-0 bg-white/80 backdrop-blur-xl">
-            <Link href={'/'} className={'cursor-pointer'}><Image
+        <div className="w-full px-[36px] md:px-[72px] xl:px-[216px] py-[18px] z-50 flex items-center justify-between fixed top-0 left-0 bg-white/80 backdrop-blur-xl">
+            <Link href={'/'} className={'cursor-pointer z-50'} ><Image
                 src="/aloc-cars-logo.png"
                 alt="logo"
                 width={120}
                 height={72}
             /></Link>
-            <div className="flex gap-[24px] items-center">
+            <div className="hidden md:flex gap-[24px] items-center">
                 {NavLinksData.map(({href, label}) => (
                     <Link
                         key={href}
@@ -89,6 +91,60 @@ const Navbar = () => {
                 </label>
 
             </div>
+            <label className="btn btn-circle swap swap-rotate z-50">
+                {/* this hidden checkbox controls the state */}
+                <input type="checkbox" onChange={() => {setIsMenuOpen(!isMenuOpen)}}/>
+
+                {/* hamburger icon */}
+                <svg
+                    className="swap-off fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 512 512">
+                    <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/>
+                </svg>
+
+                {/* close icon */}
+                <svg
+                    className="swap-on fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 512 512">
+                    <polygon
+                        points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/>
+                </svg>
+            </label>
+
+
+            <div
+                className={`
+                    ${isMenuOpen ? "left-0" : "left-full" } 
+                    flex md:hidden 
+                    transition-all duration-500 
+                    fixed top-0 w-screen h-screen bg-white/95 backdrop-blur-3xl z-20
+                    flex-col justify-center gap-[36px]
+                    px-[36px]
+                    items-end
+                `}
+            >
+
+                {NavLinksData.map(({href, label}) => (
+                    <Link
+                        key={href}
+                        href={href}
+                        className={`font-semibold text-[30px] transition-all ${
+                            pathname === href ? "text-[#F16625]" : "hover:text-[#F16625]"
+                        }`}
+                        onClick={() => {setIsMenuOpen(!isMenuOpen)}}
+                    >
+                        {label}
+                    </Link>
+                ))}
+            </div>
+
+
         </div>
     );
 };
