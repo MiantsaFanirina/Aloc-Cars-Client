@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/features/components/navbar";
 import Footer from "@/features/footer";
+import {FilterContextProvider} from "@/features/our-vehicles/context/filterContext";
 
 
 export const metadata: Metadata = {
@@ -22,7 +23,9 @@ export default function RootLayout({
       >
         <Navbar/>
         <div className={"w-full h-full flex flex-col overflow-x-hidden overflow-y-scroll pt-[144px]"}>
-            {children}
+            <FilterContextProvider>
+                {children}
+            </FilterContextProvider>
             <Footer/>
         </div>
       </body>

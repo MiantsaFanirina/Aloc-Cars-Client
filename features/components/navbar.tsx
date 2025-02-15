@@ -12,8 +12,8 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="w-full px-[36px] md:px-[72px] xl:px-[216px] py-[18px] z-50 flex items-center justify-between fixed top-0 left-0 bg-white/80 backdrop-blur-xl">
-            <Link href={'/'} className={'cursor-pointer z-50'} ><Image
+        <div className="w-full px-[36px] md:px-[72px] xl:px-[216px] py-[18px] z-30 flex items-center justify-between fixed top-0 left-0 bg-white">
+            <Link href={'/'} className={'cursor-pointer z-40'} ><Image
                 src="/aloc-cars-logo.png"
                 alt="logo"
                 width={120}
@@ -91,9 +91,9 @@ const Navbar = () => {
                 </label>
 
             </div>
-            <label className="lg:hidden btn btn-circle swap swap-rotate z-50">
+            <label className="lg:hidden btn btn-circle swap swap-rotate z-30">
                 {/* this hidden checkbox controls the state */}
-                <input type="checkbox" onChange={() => {setIsMenuOpen(!isMenuOpen)}}/>
+                <input type="checkbox" checked={isMenuOpen} onChange={() => {setIsMenuOpen(!isMenuOpen)}}/>
 
                 {/* hamburger icon */}
                 <svg
