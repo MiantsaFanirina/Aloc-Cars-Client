@@ -1,4 +1,6 @@
-const NavLinksData = [
+import {NavLinkType} from "@/types/type";
+
+const NavLinksData : NavLinkType[] = [
     { href: "/", label: "Home" },
     { href: "/our-vehicles", label: "Our Vehicles" },
     { href: "/promotions-special-offers", label: "Promotions" },

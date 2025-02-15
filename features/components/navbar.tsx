@@ -19,7 +19,7 @@ const Navbar = () => {
                 width={120}
                 height={72}
             /></Link>
-            <div className="hidden md:flex gap-[24px] items-center">
+            <div className="hidden lg:flex gap-[24px] items-center">
                 {NavLinksData.map(({href, label}) => (
                     <Link
                         key={href}
@@ -91,7 +91,7 @@ const Navbar = () => {
                 </label>
 
             </div>
-            <label className="btn btn-circle swap swap-rotate z-50">
+            <label className="lg:hidden btn btn-circle swap swap-rotate z-50">
                 {/* this hidden checkbox controls the state */}
                 <input type="checkbox" onChange={() => {setIsMenuOpen(!isMenuOpen)}}/>
 
@@ -121,7 +121,7 @@ const Navbar = () => {
             <div
                 className={`
                     ${isMenuOpen ? "left-0" : "left-full" } 
-                    flex md:hidden 
+                    flex lg:hidden 
                     transition-all duration-500 
                     fixed top-0 w-screen h-screen bg-white/95 backdrop-blur-3xl z-20
                     flex-col justify-center gap-[36px]

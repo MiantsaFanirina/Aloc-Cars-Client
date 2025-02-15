@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
       return (
-          <div className={'w-full px-[72px] xl:px-[216px] pt-[36px] flex flex-col gap-[144px] mb-[144px]'}>
+          <div className={'w-full px-[36px] md:px-[72px] xl:px-[216px] pt-[36px] flex flex-col gap-[144px] mb-[144px]'}>
 
               {/* HERO SECTION */}
 
