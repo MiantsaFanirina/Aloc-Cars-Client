@@ -19,7 +19,7 @@ const FilterIndicator = (
         <div className={'flex justify-between'}>
             <Link
                 href={'/our-vehicles'}
-                className={'text-sm font-bold text-[#F16625]'}
+                className={'md:text-sm font-bold text-[#F16625]'}
             >
                 {getContentByValue(FilterValue)}
             </Link>
@@ -28,8 +28,8 @@ const FilterIndicator = (
                 className={'flex md:hidden items-center gap-1 cursor-pointer'}
                 onClick={() => {onFilterOpen(!isFilterOpen)}}
             >
-                <Filter width={10} height={10}/>
-                <span className={'text-xs font-semibold'}>Choose Filter</span>
+                <Filter width={30} height={30} className={"w-[14px] md:w-[10px] md:h-[14px] h-[16px]"}/>
+                <span className={'md:text-xs font-semibold'}>Choose Filter</span>
             </div>
         </div>
     );

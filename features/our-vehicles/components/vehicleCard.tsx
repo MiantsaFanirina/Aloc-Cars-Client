@@ -6,8 +6,8 @@ const VehicleCard = () => {
 
     const {FilterValue} = useFilterContext();
     return (
-        <div className={'w-full md:w-[270px] h-[324px] flex flex-col justify-between'}>
-            <div className={'w-full h-[216px] bg-[#D9D9D9]'}></div>
+        <div className={'w-full md:w-[270px] gap-6 md:gap-0 md:h-[324px] flex flex-col justify-between'}>
+            <div className={'w-full aspect-square md:aspect-auto md:h-[216px] bg-[#D9D9D9]'}></div>
             <h3 className={'font-semibold'}>Car name</h3>
 
             <Link href={`/our-vehicles/car-detail?carId=${1}&filter=${FilterValue}`}

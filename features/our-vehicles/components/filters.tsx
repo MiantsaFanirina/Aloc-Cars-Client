@@ -64,7 +64,7 @@ const Filters = (
                     onClick={() => {onFilterOpen(!isFilterOpen)}}
                 >
                     <ChevronLeft width={16} height={16} />
-                    <span className={'text-sm font-bold'}>Back</span>
+                    <span className={'md:text-sm font-bold'}>Back</span>
                 </div>
                 <div className={'w-full h-fit flex gap-2 flex-wrap'}>
                     {FiltersData.map(({content, value}) => (

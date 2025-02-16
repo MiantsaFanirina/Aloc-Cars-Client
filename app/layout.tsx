@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./font.css";
 import Navbar from "@/features/components/navbar";
 import Footer from "@/features/footer";
 import {FilterContextProvider} from "@/features/our-vehicles/context/filterContext";
+import type { Viewport } from 'next'
+
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 0.7,
+    maximumScale: 0.7,
+    userScalable: false,
+}
 
 
 export const metadata: Metadata = {
@@ -18,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-inter antialiased w-screen h-screen overflow-hidden flex flex-col`}
+          className={`font-inter antialiased w-screen h-screen overflow-hidden flex flex-col`}
         data-theme="wireframe"
       >
         <Navbar/>

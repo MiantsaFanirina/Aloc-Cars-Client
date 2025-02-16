@@ -11,7 +11,7 @@ const FilterIndicatorWithCarName = (
 ) => {
 
     return (
-        <div className={'flex gap-1 items-center text-sm font-bold cursor-pointer'}>
+        <div className={'flex gap-1 items-center md:text-sm font-bold cursor-pointer'}>
             <Link
                 href={`/our-vehicles?filter=${FilterValue}`}
                 className={'hover:text-[#F16625] hover:underline transition-all'}

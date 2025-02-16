@@ -50,7 +50,7 @@ export default function Home() {
                   </div>
 
                   {/*  STEPS  */}
-                  <div className={'w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-[72px]'}>
+                  <div className={'w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-y-[72px]'}>
 
                       {/* STEP */}
                       <div className={'flex flex-col min-w-[384px] max-w-[384px] gap-4 text-center'}>
@@ -124,7 +124,7 @@ export default function Home() {
                   <div className={'w-full flex flex-col md:flex-row gap-y-[72px] items-center justify-between flex-wrap'}>
 
                       {/* LINK */}
-                      <div className={'w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
+                      <Link href={'/our-vehicles?filter=budget-low-cost-hire'} className={'w-full md:w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
                           <Image
                               src={'/home/aloc-cars-location-budget.jpg'}
                               width={1000}
@@ -154,9 +154,9 @@ export default function Home() {
                                   BUDGET / LOW-COST HIRE
                               </h1>
                           </div>
-                      </div>
+                      </Link>
                       {/* LINK */}
-                      <div className={'w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
+                      <Link href={'/our-vehicles?filter=standard-compact-hire'} className={'w-full md:w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
                           <Image
                               src={'/home/aloc-cars-location-tourisme.jpg'}
                               width={1000}
@@ -189,9 +189,9 @@ export default function Home() {
 
                               </h1>
                           </div>
-                      </div>
+                      </Link>
                       {/* LINK */}
-                      <div className={'w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
+                      <Link href={'/our-vehicles?filter=utilities-moving-trucks-hire'} className={'w-full md:w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
                           <Image
                               src={'/home/aloc-cars-location-utilitaires.jpg'}
                               width={1000}
@@ -221,9 +221,9 @@ export default function Home() {
                                   UTILITIES HIRE (2.5 – 20 m3)
                               </h1>
                           </div>
-                      </div>
+                      </Link>
                       {/* LINK */}
-                      <div className={'w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
+                      <Link href={'/our-vehicles?filter=prestige-gt-sport-hire'} className={'w-full md:w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
                           <Image
                               src={'/home/aloc-cars-location-prestige.jpg'}
                               width={1000}
@@ -253,9 +253,9 @@ export default function Home() {
                                   PRESTIGE / GT SPORT HIRE
                               </h1>
                           </div>
-                      </div>
+                      </Link>
                       {/* LINK */}
-                      <div className={'w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
+                      <Link href={'/our-vehicles?filter=4x4-suv-hire'} className={'w-full md:w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
                           <Image
                               src={'/home/aloc-cars-location-4x4.jpg'}
                               width={1000}
@@ -285,9 +285,9 @@ export default function Home() {
                                   4X4 / SUV HIRE
                               </h1>
                           </div>
-                      </div>
+                      </Link>
                       {/* LINK */}
-                      <div className={'w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
+                      <Link href={'/our-vehicles?filter=minibus-hire'} className={'w-full md:w-[384px] h-[230px] bg-secondary overflow-hidden group relative cursor-pointer'}>
                           <Image
                               src={'/home/aloc-cars-location-minibus.jpg'}
                               width={1000}
@@ -317,7 +317,7 @@ export default function Home() {
                                   MINIBUS HIRE (7 – 14 SEATED)
                               </h1>
                           </div>
-                      </div>
+                      </Link>
 
                   </div>
 

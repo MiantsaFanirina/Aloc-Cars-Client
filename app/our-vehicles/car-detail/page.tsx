@@ -32,7 +32,7 @@ const SingleCarDetailPage = () => {
         >
             <FilterIndicatorWithCarName FilterValue={FilterValue}/>
 
-            <div className={'w-full flex flex-col md:flex-row'}>
+            <div className={'w-full flex flex-col md:flex-row md:gap-0 gap-[36px]'}>
                 <div className={'w-full md:w-1/2 aspect-square bg-[#D9D9D9]'}></div>
                 <div className={'w-full md:w-1/2 md:pl-[72px] md:py-[36px] flex flex-col gap-[36px]'}>
 
