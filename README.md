@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aloc-Cars 🚗
 
-## Getting Started
+Aloc-Cars is a car rental web application developed for the Swiss-based company [aloccars.ch](https://www.aloccars.ch). The project is currently under development and features a robust backend built with **Symfony** and a responsive frontend using **Next.js**.
 
-First, run the development server:
+This app aims to streamline the process of searching, booking, and managing car rentals online with a user-friendly interface and solid backend architecture.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📱 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Vehicle browsing with filters (brand, model, availability)
+- Booking system with date selection
+- Admin panel for car and reservation management
+- Secure authentication and session management
+- Dynamic frontend with optimized performance
+- Multilingual support (planned)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- [Symfony](https://symfony.com/) – Backend API & business logic  
+- [Next.js](https://nextjs.org/) – Frontend UI and SSR  
+- [TypeScript](https://www.typescriptlang.org/)  
+- [Tailwind CSS](https://tailwindcss.com/)  
+- [MySQL](https://www.mysql.com/) – Database  
+- [Axios](https://axios-http.com/) – API communication  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📸 Screenshot
 
-## Deploy on Vercel
+![Aloc-Cars Screenshot](./public/screenshot.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💡 Project Goals
+
+The main goal of Aloc-Cars is to provide a smooth and intuitive rental experience for customers, while giving administrators the tools they need to efficiently manage the fleet and reservations. The project also serves as a full-stack showcase combining Symfony and Next.js in a real-world business setting.
+
+---
